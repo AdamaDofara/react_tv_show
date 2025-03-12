@@ -9,6 +9,7 @@ import { TVShowListItem } from "./components/TVShowListitem/TVShowListItem";
 import { TVShowList } from "./components/TVShowList/TVShowList";
 import { SearchBar } from "./components/SearchBar/SearchBar";
 import logo from "./assets/images/logo.png";
+import { Analytics } from "@vercel/analytics/react";
 export function App() {
   const [currentTVShoww, SetCurrentTVShow] = useState();
   const [recommandationList, SetRecommandationList] = useState([]);
@@ -70,6 +71,7 @@ export function App() {
           : "black",
       }}
     >
+      <Analytics />
       <div className={S.header}>
         <div className="row">
           <div className="col-4">
